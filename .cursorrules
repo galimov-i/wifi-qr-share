@@ -1,0 +1,38 @@
+# Cursor Rules for WiFi QR Share Utility
+
+## General Principles
+- Focus on clean, minimalist, and production-ready code.
+- Prioritize type safety and user experience (UX).
+- Code must be stateless; no external databases or cloud APIs.
+- NEVER log or store passwords.
+
+## Code Style
+- Language: Python 3.10+
+- Formatting: Follow `black` formatting standards.
+- Type Hints: Enforce Python Type Hints for ALL functions.
+- Docstrings: Use Google-style Docstrings for all modules, classes, and functions.
+
+## Error Handling
+- Validate all user inputs rigorously.
+- Handle Unicode (emojis in SSID) and special characters robustly.
+- Use specific exception types where possible.
+
+## Security
+- Mask password inputs in the UI.
+- Sanitize inputs to prevent injection (though less relevant for this specific app context, still good practice).
+- Ensure proper escaping for special characters in WiFi configuration strings.
+
+## Specific Modules
+### wifi_qr_generator.py
+- Use `segno` library for QR code generation.
+- Implement `generate_wifi_qr` and `export_to_png`.
+- Validate SSID length (1-32 chars) and Password length (8-63 chars for WPA).
+
+### app.py
+- Use `streamlit` for the UI.
+- Provide a clean, intuitive layout.
+- Include "Download PNG" and "Print Friendly" actions.
+
+### print_template.py
+- Generate A4 print-friendly HTML.
+- Embed QR code as Base64 image.
