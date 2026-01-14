@@ -1,4 +1,3 @@
-streamlit
 segno
 pillow
 black
