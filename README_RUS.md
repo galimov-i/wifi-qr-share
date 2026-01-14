@@ -63,3 +63,6 @@
 ## 📝 Лицензия
 
 [MIT](LICENSE)
+
+<img width="1280" height="758" alt="image" src="https://github.com/user-attachments/assets/4c875131-9dd2-4619-afce-3bb921472812" />
+
